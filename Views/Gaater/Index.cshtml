@@ -1,22 +1,19 @@
 ﻿@model IEnumerable<HumorApp.Models.Gaate>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Gaate";
 }
 
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Lag ny gåte</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.GaateSporsmal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GaateSvar)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Kategori)
@@ -29,17 +26,14 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.GaateSporsmal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GaateSvar)
-            </td>
+            </td> 
             <td>
                 @Html.DisplayFor(modelItem => item.Kategori)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Rediger</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Se svar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Slett</a>
             </td>
         </tr>
 }
